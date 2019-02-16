@@ -1,0 +1,33 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.club_header{
+    text-align: center;
+}
+
+.club_category{
+    display: block;
+    font-size: 1rem;
+}
+
+.carousel-item:nth-child(1){
+    background-image: url(/coding.png);
+}
+
+.carousel-item:nth-child(2){
+    background-image: url(/hackerthon.jpg);
+}
+
+.carousel-item:nth-child(3){
+    background-image: url(/lion1.jpg);
+}
+
+.carousel-item{
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}

@@ -1,0 +1,72 @@
+<!--<h1>게시물 목록</h1>-->
+<!--<a href='/home/new'>새 글 쓰기</a><br>-->
+<!--<% @posts.each do |x|%>-->
+<!--  <%=x.title%><br>-->
+<!--  <%=x.content%><br>-->
+<!--  <a href='/home/destroy/<%=x.id%>'>삭제</a>-->
+<!--  <a href='/home/edit/<%=x.id%>'>수정</a>-->
+<!--<%end%>-->
+
+<section class="about">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex flex-column  justify-content-center align-items-center h-100">
+        <h4 class="about_title text-white">멋쟁이사자처럼</h4>
+        <p class="about_text text-white">어쩌구저쩌구</p>
+        <a class="btn text-white">자세히 보기</a>
+        </div>  
+      </div>
+        
+      <div class="carousel-item"></div>
+       
+      <div class="carousel-item"></div>
+        
+      
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+</section>
+  
+
+
+
+<section class="clubs">
+<div class="container">
+    <header class="club_header">
+    <h2 class="club_title">
+      <span class="club_category">Clubs</span>
+      진행중인 소모임
+    </h2>
+    
+  </header>
+  
+  
+  <div class="cards row">
+    <% @posts.each do |x|%>
+    
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="/lion2.jpg" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title"><%=x.title%></h5>
+        <p class="card-text"><%=x.content%></p>
+        <a href="/home/destroy/<%=x.id%>" class="btn btn-primary">삭제</a>
+        <a href="/home/edit/<%=x.id%>" class="btn btn-primary">수정</a>
+        </div>
+      </div>
+    </div>
+    
+    <%end%>
+    
+  </div>
+</div>
+</section>
